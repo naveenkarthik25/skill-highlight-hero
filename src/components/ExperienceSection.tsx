@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase } from "lucide-react";
+import { Briefcase, ArrowUpRight } from "lucide-react";
 
 const experiences = [
   {
@@ -9,10 +9,10 @@ const experiences = [
     period: "Apr 2024 – Present",
     bullets: [
       "Developed and deployed Python-based REST APIs using Azure Functions for scalable serverless backend services.",
-      "Built a Face Attendance System using OpenCV and InsightFace, achieving 99% accuracy and reducing manual tracking by 80%.",
-      "Designed a GST Calculator API using FastAPI and Docker for simplified deployment.",
-      "Integrated Azure Cosmos DB and Azure Blob Storage for secure data storage and file management.",
-      "Automated deployment of FastAPI microservices using GitHub Actions.",
+      "Built a Face Attendance System using OpenCV and InsightFace — 99% accuracy, 80% reduction in manual tracking.",
+      "Designed a GST Calculator API using FastAPI + Docker for simplified deployment.",
+      "Integrated Azure Cosmos DB and Azure Blob Storage for secure backend data management.",
+      "Automated CI/CD for FastAPI microservices using GitHub Actions.",
     ],
     tech: ["Python", "Azure Functions", "FastAPI", "OpenCV", "Docker", "GitHub Actions"],
   },
@@ -20,12 +20,13 @@ const experiences = [
 
 const projects = [
   {
-    name: "Groflex – Business Intelligence Platform",
+    name: "Groflex",
+    subtitle: "Business Intelligence Platform",
     bullets: [
-      "Built FastAPI-based microservices for business data extraction and CRUD operations with MongoDB.",
-      "Developed time-series forecasting pipelines using Facebook Prophet for sales predictions.",
-      "Implemented agentic AI routing with LangGraph and LangChain ReAct agents for dynamic chatbot tool selection.",
-      "Created a RAG pipeline using LangChain, FAISS, and HuggingFace embeddings for semantic search.",
+      "Built FastAPI microservices for business data extraction with MongoDB CRUD operations.",
+      "Developed time-series forecasting with Facebook Prophet for sales metric predictions.",
+      "Implemented agentic AI routing using LangGraph + LangChain ReAct for dynamic chatbot tool selection.",
+      "Created a RAG pipeline with FAISS and HuggingFace embeddings for semantic search over business data.",
     ],
     tech: ["FastAPI", "MongoDB", "LangChain", "LangGraph", "FAISS", "HuggingFace"],
   },
@@ -33,21 +34,24 @@ const projects = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-24 px-6 bg-card/30">
-      <div className="container mx-auto max-w-5xl">
+    <section id="experience" className="py-28 px-6 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background pointer-events-none" />
+      <div className="container mx-auto max-w-6xl relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
-            <span className="text-primary font-mono text-lg">03.</span> Experience
+          <p className="text-primary font-mono text-sm mb-3 tracking-wider">WHERE I'VE WORKED</p>
+          <h2 className="text-4xl md:text-5xl font-bold font-display text-foreground">
+            Experience
           </h2>
-          <div className="w-20 h-0.5 bg-primary/50 mb-12" />
+          <div className="line-accent mt-4" />
         </motion.div>
 
-        {/* Work Experience */}
+        {/* Work */}
         {experiences.map((exp, i) => (
           <motion.div
             key={i}
@@ -55,26 +59,29 @@ const ExperienceSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="mb-12 border-l-2 border-primary/30 pl-6 relative"
+            className="glass-card-hover rounded-xl p-8 mb-8"
           >
-            <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary/20 border-2 border-primary" />
-            <div className="flex flex-wrap items-center gap-2 mb-1">
-              <Briefcase size={16} className="text-primary" />
-              <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-6">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <Briefcase size={18} className="text-primary" />
+                  <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
+                </div>
+                <p className="text-primary font-mono text-sm">{exp.company} · {exp.location}</p>
+              </div>
+              <span className="text-sm text-muted-foreground font-mono whitespace-nowrap">{exp.period}</span>
             </div>
-            <p className="text-primary font-mono text-sm mb-1">{exp.company} · {exp.location}</p>
-            <p className="text-muted-foreground text-sm mb-4">{exp.period}</p>
-            <ul className="space-y-2 mb-4">
+            <ul className="space-y-3 mb-6">
               {exp.bullets.map((b, j) => (
-                <li key={j} className="text-secondary-foreground/80 text-sm flex gap-2">
-                  <span className="text-primary mt-1 shrink-0">▹</span>
+                <li key={j} className="text-secondary-foreground/80 text-sm flex gap-3 leading-relaxed">
+                  <span className="text-primary mt-0.5 shrink-0">▸</span>
                   {b}
                 </li>
               ))}
             </ul>
             <div className="flex flex-wrap gap-2">
               {exp.tech.map((t) => (
-                <span key={t} className="px-2 py-0.5 text-xs font-mono rounded bg-primary/10 text-primary border border-primary/20">
+                <span key={t} className="px-3 py-1 text-xs font-mono rounded-md bg-primary/10 text-primary border border-primary/15">
                   {t}
                 </span>
               ))}
@@ -88,10 +95,13 @@ const ExperienceSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="mt-20 mb-10"
         >
-          <h3 className="text-2xl font-bold mb-8 text-foreground">
-            <span className="text-primary font-mono text-base">03.1</span> Key Project
-          </h3>
+          <p className="text-primary font-mono text-sm mb-3 tracking-wider">WHAT I'VE BUILT</p>
+          <h2 className="text-4xl md:text-5xl font-bold font-display text-foreground">
+            Featured Project
+          </h2>
+          <div className="line-accent mt-4" />
         </motion.div>
 
         {projects.map((proj, i) => (
@@ -101,20 +111,24 @@ const ExperienceSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-card border border-border rounded-lg p-6 hover:border-glow transition-all duration-300"
+            className="glass-card-hover rounded-xl p-8"
           >
-            <h4 className="text-lg font-semibold text-foreground mb-4">{proj.name}</h4>
-            <ul className="space-y-2 mb-4">
+            <div className="flex items-center gap-2 mb-1">
+              <h3 className="text-2xl font-bold gradient-text">{proj.name}</h3>
+              <ArrowUpRight size={20} className="text-primary" />
+            </div>
+            <p className="text-muted-foreground text-sm mb-6">{proj.subtitle}</p>
+            <ul className="space-y-3 mb-6">
               {proj.bullets.map((b, j) => (
-                <li key={j} className="text-secondary-foreground/80 text-sm flex gap-2">
-                  <span className="text-primary mt-1 shrink-0">▹</span>
+                <li key={j} className="text-secondary-foreground/80 text-sm flex gap-3 leading-relaxed">
+                  <span className="text-primary mt-0.5 shrink-0">▸</span>
                   {b}
                 </li>
               ))}
             </ul>
             <div className="flex flex-wrap gap-2">
               {proj.tech.map((t) => (
-                <span key={t} className="px-2 py-0.5 text-xs font-mono rounded bg-primary/10 text-primary border border-primary/20">
+                <span key={t} className="px-3 py-1 text-xs font-mono rounded-md bg-primary/10 text-primary border border-primary/15">
                   {t}
                 </span>
               ))}
