@@ -43,9 +43,6 @@ const ContactSection = () => {
           </div>
         </motion.div>
 
-        <p className="mt-20 text-muted-foreground text-xs font-mono">
-          © 2026 Naveen Karthik B. Built with ❤️
-        </p>
       </div>
     </section>
   );
