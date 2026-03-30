@@ -8,13 +8,25 @@ const experiences = [
     location: "Coimbatore",
     period: "Apr 2024 – Present",
     bullets: [
-      "Developed and deployed Python-based REST APIs using Azure Functions for scalable serverless backend services.",
-      "Built a Face Attendance System using OpenCV and InsightFace — 99% accuracy, 80% reduction in manual tracking.",
-      "Designed a GST Calculator API using FastAPI + Docker for simplified deployment.",
-      "Integrated Azure Cosmos DB and Azure Blob Storage for secure backend data management.",
-      "Automated CI/CD for FastAPI microservices using GitHub Actions.",
+      "Developed and deployed Python-based REST APIs using Azure Functions to deliver scalable serverless backend services.",
+      "Built a Face Attendance System using OpenCV and InsightFace, achieving 99% accuracy and reducing manual tracking effort by 80%; deployed on Azure for scalability.",
+      "Designed and implemented a GST Calculator API using FastAPI and Docker, enabling simplified deployment and portability.",
+      "Integrated Azure Cosmos DB (NoSQL) and Azure Blob Storage for secure backend data storage and file management.",
+      "Automated deployment of FastAPI microservices using GitHub Actions, reducing manual deployment effort and improving release consistency.",
     ],
-    tech: ["Python", "Azure Functions", "FastAPI", "OpenCV", "Docker", "GitHub Actions"],
+    tech: ["Python", "Azure Functions", "Flask", "FastAPI", "OpenCV", "Azure Cosmos DB", "Azure"],
+  },
+  {
+    role: "Associate Software Engineer Trainee",
+    company: "Mphasis Ltd.",
+    location: "",
+    period: "Aug 2023 – Feb 2024",
+    bullets: [
+      "Completed structured training on SDLC and software engineering practices in an enterprise environment.",
+      "Worked on hands-on development exercises to strengthen backend programming and API development skills.",
+      "Developed a FastAPI-based Image Compression API, enabling automated image size reduction.",
+    ],
+    tech: ["Python", "FastAPI", "REST APIs"],
   },
 ];
 
