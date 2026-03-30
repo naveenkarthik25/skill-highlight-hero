@@ -5,22 +5,22 @@ const skillCategories = [
   {
     icon: Code2,
     title: "Backend & APIs",
-    skills: ["Python", "FastAPI", "Flask", "Django", "REST APIs", "OpenCV", "JWT Auth"],
+    skills: ["Python", "FastAPI", "Flask", "Django", "RESTful APIs", "OpenCV", "JWT Auth", "CRUD & Pagination"],
   },
   {
     icon: Brain,
-    title: "AI & LLMs",
-    skills: ["LangChain", "LangGraph", "RAG", "FAISS", "HuggingFace", "Prompt Engineering", "Semantic Search"],
+    title: "Generative AI & LLMs",
+    skills: ["LangChain", "LangGraph", "RAG", "Agentic AI Workflows", "FAISS", "HuggingFace Embeddings", "Prompt Engineering", "Semantic Search", "Text Summarization", "Pinecone"],
   },
   {
     icon: Cloud,
     title: "Cloud & DevOps",
-    skills: ["Microsoft Azure", "Azure Functions", "Docker", "GitHub Actions", "Azure DevOps", "CI/CD", "SendGrid"],
+    skills: ["Microsoft Azure", "Azure Functions", "Azure API Management", "Azure Container Instances", "Azure Blob Storage", "Azure AD B2C", "Docker", "GitHub Actions", "Azure DevOps Pipelines", "SendGrid"],
   },
   {
     icon: Database,
-    title: "Data & ML",
-    skills: ["PostgreSQL", "MongoDB", "Azure Cosmos DB", "Pinecone", "Facebook Prophet", "LightGBM"],
+    title: "Data, ML & Tools",
+    skills: ["PostgreSQL", "MongoDB", "Azure Cosmos DB", "Facebook Prophet", "LightGBM", "Git", "GitHub", "VS Code", "Cursor"],
   },
 ];
 
