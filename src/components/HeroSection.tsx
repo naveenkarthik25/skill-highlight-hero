@@ -48,7 +48,7 @@ const HeroSection = () => {
           >
             <div className="line-accent" />
             <p className="text-xl md:text-2xl font-light text-secondary-foreground tracking-wide">
-              Python AI Developer
+              Python Backend & Generative AI Developer
             </p>
           </motion.div>
 
@@ -58,8 +58,8 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="text-muted-foreground text-lg leading-relaxed max-w-xl mb-10"
           >
-            2+ years crafting production-grade APIs, serverless systems, and intelligent AI pipelines 
-            with FastAPI, Azure & LangChain.
+            2.5+ years building production-grade REST APIs, serverless microservices, and containerized systems 
+            with FastAPI, Azure Functions & Docker. Skilled in RAG pipelines, agentic AI workflows & semantic search.
           </motion.p>
 
           <motion.div

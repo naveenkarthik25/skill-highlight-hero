@@ -40,7 +40,7 @@ const projects = [
       "Implemented agentic AI routing using LangGraph + LangChain ReAct for dynamic chatbot tool selection.",
       "Created a RAG pipeline with FAISS and HuggingFace embeddings for semantic search over business data.",
     ],
-    tech: ["FastAPI", "MongoDB", "LangChain", "LangGraph", "FAISS", "HuggingFace"],
+    tech: ["Python", "FastAPI", "MongoDB", "PostgreSQL", "LangChain", "LangGraph", "FAISS", "HuggingFace", "REST APIs"],
   },
 ];
 
